@@ -1,0 +1,46 @@
+body {
+    header {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+
+        div.header_left {
+            height: inherit;
+            width: calc(100% / 7 * 6);
+            display: flex;
+            align-items: center;
+            background-color: #F0F0F0;
+
+            h1 {
+                width: 100px;
+                height: 26px;
+                margin-left: 91px;
+
+                img {
+                    width: inherit;
+                    height: inherit;
+                }
+            }
+
+            nav {
+                margin-left: 60px;
+
+                ul {
+                    display: flex;
+                    width: 322px;
+                    justify-content: space-between;
+                }
+            }
+        }
+
+        .inqury {
+            background-color: #000000;
+            color: #FFFFFF;
+            width: calc(100% - calc(100% / 7 * 6));
+            height: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
