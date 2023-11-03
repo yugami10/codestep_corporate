@@ -181,6 +181,7 @@ body {
         .company {
             display: flex;
             justify-content: center;
+            padding-bottom: 110px; // todo: bottomを使わない方法あるかな。。。
 
             .company_all_area {
                 margin-top: 120px;
