@@ -1,0 +1,298 @@
+body {
+    font-size: 14px;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+
+        div.header_left {
+            height: inherit;
+            width: calc(100% / 7 * 6);
+            display: flex;
+            align-items: center;
+            background-color: #F0F0F0;
+
+            h1 {
+                width: 100px;
+                height: 26px;
+                margin-left: 91px;
+
+                img {
+                    width: inherit;
+                    height: inherit;
+                }
+            }
+
+            nav {
+                margin-left: 60px;
+
+                ul {
+                    display: flex;
+                    width: 322px;
+                    justify-content: space-between;
+                }
+            }
+        }
+
+        .inqury {
+            background-color: #000000;
+            color: #FFFFFF;
+            width: calc(100% - calc(100% / 7 * 6));
+            height: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    main {
+        background-color: #F0F0F0;
+        .main_visual {
+            width: 100%;
+            height: 600px;
+
+            img {
+                width: inherit;
+                height: inherit;
+            }
+        }
+
+        .news {
+            margin-top: 130px;
+            display: flex;
+            justify-content: center;
+
+            div {
+                width: 1000px;
+
+                ul {
+                    margin-top: 91px;
+                    display: flex;
+
+                    li {
+                        width: 333px;
+                        height: 78px;
+                        position: relative;
+
+                        &:not(:first-child) {
+                            position: relative;
+                            padding-left: 20px;
+
+                            &:before {
+                                margin-left: -20px;
+                                content: '';
+                                position: absolute;
+                                display: block;
+                                width: 1px;
+                                height: 78px;
+                                border-left: 1px solid #000000;
+                            }
+                        }
+
+                        p {
+                            height: 39px;
+                            display: flex;
+                            align-items: center;
+
+                            span {
+                                width: 50px;
+                                height: 20px;
+                                margin-left: 19px;
+                                padding: 5px 7px;
+                                font-size: 12px;
+                                background-color: #000000;
+                                color: #FFFFFF;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .about {
+            margin-top: 120px;
+            display: flex;
+
+            .img_frame {
+                width: 760px;
+                height: 400px;
+            }
+
+            .about_summary {
+                margin-top: 190px;
+                margin-left: 70px;
+
+                p {
+                    width: 473px;
+                    margin-top: 93px;
+                    line-height: 1.7em;
+                }
+            }
+        }
+
+        .business {
+            margin-top: 134px;
+            display: flex;
+            justify-content: center;
+
+            div.business_area {
+                width: 1000px;
+
+                .business_imgs_area {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 796px;
+                    margin-top: 93px;
+                    margin-left: 100px;
+
+                    .business_imgs_left {
+                        margin-top: 100px;
+                    }
+
+                    .business_imgs_left, .business_imgs_right {
+                        .img_area {
+                            width: 368px;
+                            height: 232px;
+                            margin-top: 13px;
+                        }
+
+                        div {
+                            &:not(:first-child) {
+                                p {
+                                    margin-top: 53px;
+                                }
+                            }
+
+                            p {
+                                &::before {
+                                    content: '-';
+                                    width: 18px;
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .company {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 110px; // todo: bottomを使わない方法あるかな。。。
+
+            .company_all_area {
+                margin-top: 120px;
+                position: relative;
+                width: 1000px;
+
+                .company_area {
+                    width: 567px;
+                    height: 640px;
+                    background-color: #FFFFFF;
+                    padding-top: 110px;
+                    padding-left: 62px;
+
+                    dl.company_info {
+                        margin-top: 93px;
+
+                        dt {
+                            float: left;
+                            width: 85px;
+                            font-weight: initial;
+                        }
+                        dt, dd {
+                            &:not(:first-child) {
+                                margin-top: 17px;
+                            }
+                        }
+                        dd:last-child {
+                            display: flex;
+                            flex-direction: column;
+
+                            p {
+                                &:not(:first-child) {
+                                    margin-top: 17px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .company_img {
+                    width: 547px;
+                    height: 400px;
+                    position: absolute;
+                    top: 115px;
+                    left: 453px;
+                }
+            }
+        }
+
+        // common
+        h2.section_title_area {
+            display: block;
+
+            div.section_title_en {
+                height: 36px;
+                text-align: left;
+                font-size: 36px;
+            }
+            span.section_title_jp {
+                display: block;
+                margin-top: 21px;
+                position: relative;
+                text-align: left;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    margin-top: 40px;
+                    width: 40px;
+                    border: 1px solid black;
+                }
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .clear {
+            clear: both;
+            display: none;
+        }
+    }
+
+    footer {
+        width: 100%;
+        height: 209px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 15%;
+
+        .wed_area {
+            display: flex;
+            flex-direction: column;
+            margin-top: 80px;
+
+            .wed {
+                font-size: 36px;
+            }
+
+            .copy_right {
+                margin-top: 70px;
+                font-size: 12px;
+            }
+        }
+
+        .company_info_of_footer {
+            margin-top: 44px;
+            line-height: 1.3em;
+        }
+    }
+}
