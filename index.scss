@@ -1,4 +1,6 @@
 body {
+    font-size: 14px;
+
     header {
         display: flex;
         justify-content: space-between;
@@ -176,6 +178,58 @@ body {
             }
         }
 
+        .company {
+            display: flex;
+            justify-content: center;
+
+            .company_all_area {
+                margin-top: 120px;
+                position: relative;
+                width: 1000px;
+
+                .company_area {
+                    width: 567px;
+                    height: 640px;
+                    background-color: #FFFFFF;
+                    padding-top: 110px;
+                    padding-left: 62px;
+
+                    dl.company_info {
+                        margin-top: 93px;
+
+                        dt {
+                            float: left;
+                            width: 85px;
+                            font-weight: initial;
+                        }
+                        dt, dd {
+                            &:not(:first-child) {
+                                margin-top: 17px;
+                            }
+                        }
+                        dd:last-child {
+                            display: flex;
+                            flex-direction: column;
+
+                            p {
+                                &:not(:first-child) {
+                                    margin-top: 17px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .company_img {
+                    width: 547px;
+                    height: 400px;
+                    position: absolute;
+                    top: 115px;
+                    left: 453px;
+                }
+            }
+        }
+
         // common
         h2.section_title_area {
             display: block;
@@ -206,6 +260,10 @@ body {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+        .clear {
+            clear: both;
+            display: none;
         }
     }
 }
