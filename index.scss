@@ -1,5 +1,6 @@
 $breakpoint: (
     sp: 'screen and (max-width: 900px)',
+    pc: 'screen and (min-width: 900px)',
 );
 @mixin mq($bp) {
     @media #{map-get($breakpoint, $bp)} {
@@ -89,38 +90,71 @@ body {
             margin-top: 130px;
             display: flex;
             justify-content: center;
+            @include mq(sp) {
+                justify-content: flex-start;
+                margin-top: 90px;
+            }
 
-            div {
+            .news_area {
                 width: 1000px;
+                @include mq(sp) {
+                    width: 100%;
+                    padding: 0 16px;
+                }
 
                 ul {
                     margin-top: 91px;
                     display: flex;
+                    @include mq(sp) {
+                        flex-direction: column;
+                    }
 
                     li {
                         width: 333px;
-                        height: 78px;
                         position: relative;
 
-                        &:not(:first-child) {
-                            position: relative;
-                            padding-left: 20px;
+                        @include mq(pc) {
+                            height: 78px;
+                            &:not(:first-child) {
+                                position: relative;
+                                padding-left: 20px;
 
-                            &:before {
-                                margin-left: -20px;
-                                content: '';
-                                position: absolute;
-                                display: block;
-                                width: 1px;
-                                height: 78px;
-                                border-left: 1px solid #000000;
+                                &:before {
+                                    margin-left: -20px;
+                                    content: '';
+                                    position: absolute;
+                                    display: block;
+                                    width: 1px;
+                                    height: 78px;
+                                    border-left: 1px solid #000000;
+                                }
+                            }
+                        }
+                        @include mq(sp) {
+                            &:not(:first-child) {
+                                margin-top: 19px;
                             }
                         }
 
                         p {
-                            height: 39px;
+                            // height: 39px;
                             display: flex;
                             align-items: center;
+                            @include mq(sp) {
+                                &.title {
+                                    time {
+                                        height: 14px;
+                                    }
+                                    span {
+                                        height: 20px;
+                                    }
+                                }
+
+                                &.content {
+                                    height: 16px;
+                                    margin-top: 19px;
+                                }
+                            }
 
                             span {
                                 width: 50px;
@@ -259,6 +293,14 @@ body {
         }
 
         // common
+
+        // @include mq(sp) {
+        //     width: 100%;
+        //     flex-direction: column;
+        //     align-items: start;
+        //     padding-left: 16px;
+        //     padding-top: 16px;
+        // }
         h2.section_title_area {
             display: block;
 
