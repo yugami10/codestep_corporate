@@ -238,6 +238,18 @@ body {
 
                     .business_imgs_left {
                         margin-top: 100px;
+                        @include mq(sp) {
+                            div:not(:first-child) {
+                                margin-top: 33px;
+                            }
+                        }
+                    }
+                    .business_imgs_right {
+                        @include mq(sp) {
+                            div p {
+                                margin-top: 33px;
+                            }
+                        }
                     }
 
                     .business_imgs_left, .business_imgs_right {
@@ -256,11 +268,6 @@ body {
                                     p {
                                         margin-top: 53px;
                                     }
-                                }
-                            }
-                            @include mq(sp) {
-                                &:not(:first-child) {
-                                    margin-top: 33px;
                                 }
                             }
 
