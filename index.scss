@@ -211,7 +211,6 @@ body {
         .business {
             margin-top: 134px;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             @include mq(sp) {
                 justify-content: initial;
