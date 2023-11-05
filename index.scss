@@ -290,10 +290,18 @@ body {
             justify-content: center;
             padding-bottom: 110px; // todo: bottomを使わない方法あるかな。。。
 
+            @include mq(sp) {
+                justify-content: flex-start;
+                padding: 0;
+            }
+
             .company_all_area {
                 margin-top: 120px;
                 position: relative;
                 width: 1000px;
+                @include mq(sp) {
+                    margin: 80px 16px 0 16px;
+                }
 
                 .company_area {
                     width: 567px;
@@ -302,19 +310,46 @@ body {
                     padding-top: 110px;
                     padding-left: 62px;
 
+                    @include mq(sp) {
+                        width: 100%;
+                        height: initial;
+                        padding: 50px 0 44px 20px;
+                    }
+
                     dl.company_info {
                         margin-top: 93px;
+                        @include mq(sp) {
+                            margin-top: 65px;
+                        }
 
                         dt {
                             float: left;
                             width: 85px;
                             font-weight: initial;
-                        }
-                        dt, dd {
-                            &:not(:first-child) {
-                                margin-top: 17px;
+                            @include mq(sp) {
+                                float: initial;
+                                margin-top: 14px;
+                                &:nth-of-type(2) {
+                                    margin-top: 27px;
+                                }
                             }
                         }
+
+                        @include mq(sp) {
+                            dd {
+                                margin-left: 1em;
+                                margin-top: 12px;
+                            }
+                        }
+
+                        @include mq(pc) {
+                            dt, dd {
+                                &:not(:first-child) {
+                                    margin-top: 17px;
+                                }
+                            }
+                        }
+
                         dd:last-child {
                             display: flex;
                             flex-direction: column;
@@ -334,19 +369,16 @@ body {
                     position: absolute;
                     top: 115px;
                     left: 453px;
+                    @include mq(sp) {
+                        position: initial;
+                        width: 100%;
+                        margin-top: 20px;
+                    }
                 }
             }
         }
 
         // common
-
-        // @include mq(sp) {
-        //     width: 100%;
-        //     flex-direction: column;
-        //     align-items: start;
-        //     padding-left: 16px;
-        //     padding-top: 16px;
-        // }
         h2.section_title_area {
             display: block;
 
@@ -366,6 +398,9 @@ body {
                     position: absolute;
                     display: block;
                     margin-top: 40px;
+                    @include mq(sp) {
+                        margin-top: 28px;
+                    }
                     width: 40px;
                     border: 1px solid black;
                 }
