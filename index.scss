@@ -115,6 +115,9 @@ body {
 
                         @include mq(pc) {
                             height: 78px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
                             &:not(:first-child) {
                                 position: relative;
                                 padding-left: 20px;
@@ -137,9 +140,16 @@ body {
                         }
 
                         p {
-                            // height: 39px;
                             display: flex;
                             align-items: center;
+                            @include mq(pc) {
+                                &:first-child {
+                                    margin-top: 10px;
+                                }
+                                &:last-child {
+                                    margin-bottom: 10px;
+                                }
+                            }
                             @include mq(sp) {
                                 &.title {
                                     time {
