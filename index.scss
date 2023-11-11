@@ -170,10 +170,13 @@ body {
                                 width: 50px;
                                 height: 20px;
                                 margin-left: 19px;
-                                padding: 5px 7px;
                                 font-size: 12px;
                                 background-color: #000000;
                                 color: #FFFFFF;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                line-height: 20px;
                             }
                         }
                     }
